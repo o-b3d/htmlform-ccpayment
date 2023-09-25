@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Form - CC Payment Confirmation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="container m-4 mx-auto d-flex flex-column gap-4">
+      <div class="row bg-light border-bottom">
+        <div class="col-md-12 py-3">
+          <h3 class="d-inline align-middle">
+            Credit Card Payment Confirmation
+          </h3>
+        </div>
+      </div>
+      <form class="d-flex flex-column gap-3">
+        <div class="row">
+          <div class="col-md-4">
+            <label for="cc-number">Credit Card No.</label>
+            <!--type="number" for wrapper maybe?-->
+            <input
+              class="form-control"
+              placeholder="XXXX XXXX XXXX XXXX"
+              maxlength="16"
+              inputmode="numeric"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="CVC">CVC</label>
+            <input
+              class="form-control"
+              placeholder="3 or 4 Digit Security Code"
+              maxlength="4"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="amount">Amount</label>
+            <div class="input-group">
+              <span class="input-group-text">$</span>
+              <input class="form-control" placeholder="Amount" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="first-name">First Name</label>
+            <input class="form-control" placeholder="First Name" />
+          </div>
+          <div class="col-md-6">
+            <label for="last-name">Last Name</label>
+            <input class="form-control" placeholder="Last Name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="city">City</label>
+            <input class="form-control" placeholder="Enter City name" />
+          </div>
+          <div class="col-md-3">
+            <label for="state">State</label>
+            <select name="state" class="form-select" placeholder="Pick a State">
+              <option value="FL">Florida</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="zip-code">Postal Code</label>
+            <input class="form-control" placeholder="XXXXX" maxlength="5" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>We Accept:</label>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn">
+                <input
+                  value="mastercard"
+                  type="radio"
+                  id="option1"
+                  name="options"
+                />
+                <img
+                  width="50"
+                  height="50"
+                  src="https://img.icons8.com/ios-filled/50/mastercard.png"
+                  alt="mastercard"
+                />
+              </label>
+              <label class="btn">
+                <input value="visa" type="radio" id="option2" name="options" />
+                <img
+                  width="50"
+                  height="50"
+                  src="https://img.icons8.com/ios/50/visa.png"
+                  alt="visa"
+                />
+              </label>
+              <label class="btn">
+                <input
+                  value="discover"
+                  type="radio"
+                  id="option3"
+                  name="options"
+                />
+                <img
+                  width="50"
+                  height="50"
+                  src="https://img.icons8.com/ios/50/discover.png"
+                  alt="discover"
+                />
+              </label>
+              <label class="btn">
+                <input value="AMEX" type="radio" id="option4" name="options" />
+                <img
+                  width="50"
+                  height="50"
+                  src="https://img.icons8.com/ios/50/amex.png"
+                  alt="amex"
+                />
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="message">Message</label>
+            <textarea class="form-control" style="height: 100px"></textarea>
+            <small class="form-text">Add any notes here</small>
+          </div>
+        </div>
+        <div class="row bg-light p-3 border-top">
+          <div class="col-md-10"></div>
+          <div class="col-md-2">
+            <div class="row">
+              <div class="col-md-5">
+                <lt class="btn-secondary"> </lt>
+                <button type="button" class="btn btn-secondary">Cancel</button>
+              </div>
+              <div class="col-md-5">
+                <lt class="btn-primary"> </lt>
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
